@@ -1,7 +1,7 @@
   <h1 align="center">Pagseguro Smart Flutter</h1>
 
 <div align="center" id="top"> 
-  <img src="https://seeklogo.com/images/P/pagbank-logo-11812EDA89-seeklogo.com.png" alt="LojaExpressVarejista" height=40 />
+  <img src="assets/logo_pagseguro.png" alt="PagSeguro" height=80 />
 </div>
 
 <p align="center">
@@ -62,7 +62,9 @@ AndroidManifest.xml dentro da sua Activity principal.
 
 ### # Build.gradle
 
-Em seu build.gradle a nivel do app, a propriedade `minSdkVersion` precisa ser level 23. Recurso este exigido pela versão 1.27.2 do plugpagservice da PagSeguro.
+#### => Wrapper v1.29.5
+
+Em seu build.gradle a nivel do app, a propriedade `minSdkVersion` precisa ser level 23. Recurso este exigido pela versão do plugpagservice da PagSeguro.
 
 ```xml
 ...
@@ -175,7 +177,7 @@ class PaymentController extends PaymentHandler {
 
 ```
 
-#### Métodos da ´PaymentHandler´
+#### Métodos da `PaymentHandler`
 
 ##### onAbortedSuccessfully
 
@@ -237,13 +239,15 @@ Logo após ativação, o SDK da PagSeguro fornece algumas opções de transaçã
 \*\*Obs: A via do estabelecimento do estabelecimento pode ser impressa ou não baseada no parâmetro printReceipt. Após a finalização do pagamento, um popUp é exibido perguntando se deseja a via do consumidor.
 
 ### Método de impressão
+
 Deve-se verificar se seu projeto tem a permissão de acesso aos arquivos dentro do dispositivo.
 
 #### Imprimir um arquivo
+
 `PagseguroSmart.instance().payment.printerfromFile(path)` => Fornecer o caminho absoluto ao arquivo que deve ser impresso.
 
-
 #### Imprimir um widget
+
 Basta chamar a função abaixo, passando o widget a ser impresso pela POS.
 
 ```
@@ -253,6 +257,7 @@ PrintRenderWidget.print(
   child: MyCustomWidget(),
 );
 ```
+
 ---
 
 ## NfcSmart

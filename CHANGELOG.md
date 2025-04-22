@@ -1,7 +1,11 @@
-## 1.2.1
+## 1.3.1
 
 - Adiciona opção de colocar um widget à frente do componente que será impresso
-- 
+
+## 1.3.0
+
+- Atualiza versão do `wrapper` da pagseguro para `1.29.5`
+
 ## 1.2.0
 
 - Adiciona função para renderizar e imprimir um componente
